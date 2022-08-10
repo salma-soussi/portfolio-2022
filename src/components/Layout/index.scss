@@ -37,7 +37,8 @@
   animation-delay: 1s;
 }
 
-.about-page {
+.about-page,
+.contact-page {
   .text-zone {
     position: absolute;
     left: 10%;
@@ -95,10 +96,10 @@
         animation-delay: 1.1s;
       }
       &:nth-of-type(2) {
-        animation-delay: 1.3s;
+        animation-delay: 1.2s;
       }
       &:nth-of-type(3) {
-        animation-delay: 1.4s;
+        animation-delay: 1.3s;
       }
     }
   }
