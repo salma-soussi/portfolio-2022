@@ -13,13 +13,14 @@ const Logo = () => {
   const pathVariants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i) => {
-      const delay = 1 + i * 0.01;
+      const delay = 1 + i * 0.0001;
       return {
         pathLength: 1,
         opacity: 1,
         transition: {
-          pathLength: { delay, type: 'spring', duration: 20.5, bounce: 0 },
-          opacity: { delay, duration: 0.001 },
+          pathLength: { delay, type: 'spring', duration: 40, bounce: 0 },
+          opacity: { delay, duration: 0.01 },
+          ease: "easeInOut",
         },
       };
     },
@@ -58,12 +59,12 @@ const Logo = () => {
         ref={solidLogoRef}
         src={LogoS}
         alt="JavaScript,  Developer"
-        initial={{ opacity: 0,  rotate: 30 }}
-        animate={{ opacity: 1,  rotate: 30 }}
+        initial={{ opacity: 0, rotate: 30 }}
+        animate={{ opacity: 1, rotate: 30 }}
         transition={{
           duration: 2,
-          delay: 2.5,
-          ease: [0, 0.71, 0.2, 1.01],
+          delay: 1.3,
+          ease: 'easeIn',
         }}
       />
 
