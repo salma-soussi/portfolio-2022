@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import LogoTitle from '../../assets/images/logo-s.png';
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
-//import Logo from './Logo';
+import Logo from './Logo';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const nameArray = ['a', 'l', 'm', 'a'];
   const jobArray = [
+    'a',
+    ' ',
     'w',
     'e',
     'b',
@@ -34,22 +36,23 @@ const Home = () => {
       <div className="text-zone">
         <h1>
           <span className={letterClass}>H</span>
-          <span className={`${letterClass} _11`}>i,</span>
+          <span className={`${letterClass} _11`}>i</span>
+          <span className={`${letterClass} _12`}>,</span>
           <br />
-          <span className={`${letterClass} _12`}>I</span>
-          <span className={`${letterClass} _13`}>'</span>
-          <span className={`${letterClass} _14`}>m</span>
+          <span className={`${letterClass} _13`}>I</span>
+          <span className={`${letterClass} _14`}>'</span>
+          <span className={`${letterClass} _15`}>m</span>
           <img src={LogoTitle} alt="developer" />
           <AnimatedLetters
             letterClass={letterClass}
             strArray={nameArray}
-            idx={15}
+            idx={16}
           />
           <br />
           <AnimatedLetters
             letterClass={letterClass}
             strArray={jobArray}
-            idx={22}
+            idx={25}
           />
         </h1>
         <h2>Full Stack Developer / JavaScript Expert / Student</h2>
@@ -57,7 +60,7 @@ const Home = () => {
           CONTACT ME
         </Link>
       </div>
-      {/* <Logo /> */}
+      <Logo />
     </div>
   );
 };
